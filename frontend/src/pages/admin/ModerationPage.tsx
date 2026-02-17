@@ -1,0 +1,2 @@
+import { useEffect, useState } from 'react';import { api } from '../../api/client';
+export default function ModerationPage(){const [events,setEvents]=useState<any[]>([]);useEffect(()=>{api.get('/events',{params:{from:'2026-01-01T00:00:00.000Z',to:'2026-12-31T00:00:00.000Z'}}).then(r=>setEvents(r.data));},[]);return <div className='p-4 bg-white m-4 rounded shadow'>{events.map(e=><div key={e.id} className='flex justify-between'><span>{e.title}</span><button onClick={()=>api.delete(`/admin/events/${e.id}`)}>Delete</button></div>)}</div>;}

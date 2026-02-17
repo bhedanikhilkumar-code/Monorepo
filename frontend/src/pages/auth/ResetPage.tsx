@@ -1,0 +1,2 @@
+import { useState } from 'react';import { api } from '../../api/client';
+export default function ResetPage(){const [token,setToken]=useState('');const [password,setPassword]=useState('');return <div className='max-w-md mx-auto mt-20 bg-white p-6 rounded shadow space-y-2'><input value={token} onChange={e=>setToken(e.target.value)} placeholder='Token'/><input type='password' value={password} onChange={e=>setPassword(e.target.value)} placeholder='New password'/><button onClick={()=>api.post('/auth/reset-password',{token,password})}>Reset</button></div>;}

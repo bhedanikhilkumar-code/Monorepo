@@ -1,0 +1,2 @@
+import { useEffect, useState } from 'react';import { api } from '../../api/client';
+export default function DashboardPage(){const [kpis,setKpis]=useState<any>({});useEffect(()=>{api.get('/admin/kpis').then(r=>setKpis(r.data));},[]);return <div className='p-4 grid grid-cols-2 gap-4'>{Object.entries(kpis).map(([k,v])=><div key={k} className='bg-white p-4 rounded shadow'><h3>{k}</h3><div className='text-2xl'>{String(v)}</div></div>)}</div>;}
