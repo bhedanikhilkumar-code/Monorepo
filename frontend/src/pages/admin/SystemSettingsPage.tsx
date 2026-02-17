@@ -1,0 +1,1 @@
+export default function SystemSettingsPage(){return <div className='p-4 bg-white m-4 rounded shadow'><h2 className='font-bold'>System Settings</h2><p>Registration toggle and email/backup settings are configured by backend env variables.</p></div>;}
