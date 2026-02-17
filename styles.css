@@ -46,6 +46,35 @@ h1 {
 
 .date {
   margin-top: 0.75rem;
+  margin-bottom: 0.4rem;
   font-size: 1rem;
   color: var(--muted);
+}
+
+.zone {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
+}
+
+button {
+  border: 1px solid rgba(226, 232, 240, 0.4);
+  background: rgba(148, 163, 184, 0.2);
+  color: var(--text);
+  border-radius: 0.6rem;
+  padding: 0.45rem 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(148, 163, 184, 0.35);
 }
